@@ -30,6 +30,9 @@ gem "pundit"
 
 gem "simple_form", github: "heartcombo/simple_form"
 
+gem "sassc-rails"
+gem "font-awesome-sass", "~> 6.1"
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
