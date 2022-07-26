@@ -1,0 +1,27 @@
+#contact {
+  height: 100vh;
+  margin: 0 10vw;
+  padding: 10vh 0 0 5vw;
+  img {
+    width: 4rem;
+  }
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  height: 45vh;
+  margin-top: 11vh;
+  justify-content: space-between;
+  a, p {
+    font-size: 35px;
+    margin: 0;
+    line-height: 64px;
+  }
+  img {
+    margin-right: 2rem;
+  }
+  div {
+    display: flex;
+  }
+}

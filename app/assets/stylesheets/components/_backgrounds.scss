@@ -1,0 +1,21 @@
+.index-background {
+  background-image: url(background_home.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-show {
+  background-image: url(background_show.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.white-background{
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 5vh 5vw;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  border-radius: 20px;
+  h1 {
+    line-height: 8vh;
+  }
+}
