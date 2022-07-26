@@ -1,0 +1,133 @@
+.menu {
+  // position: absolute;
+  position: fixed;
+  background: #FFD31D;
+  width: 3em;
+  height: 3em;
+  border-radius: 5em;
+  margin: 7em 1em;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.menu:after {
+  content: "";
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 1em;
+  height: 0.2em;
+  border-top: 0.6em double #fff;
+  border-bottom: 0.2em solid #fff;
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+.menu li {
+  width: 5em;
+  height: 1.4em;
+  padding: 0.2em;
+  margin-top: 0.2em;
+  text-align: center;
+  border-radius: 0.5em;
+  transition: all 0.5s;
+  background: #fdaead;
+  opacity: 0;
+  z-index: -1;
+}
+.menu:hover li {
+  opacity: 1;
+}
+
+.menu:hover ul::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  // left: 50%;
+  // top: -5.0em;
+  // border-width: 6.5em;
+  border-radius: 7.5em;
+  // border-style: solid;
+  // border-color: rgba(0,0,0,0.01);
+  z-index: -1;
+  cursor: default;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu ul {
+  transform: rotate(180deg) translateY(-2em);
+  transition: 0.5s all;
+}
+.menu:hover ul {
+  transform: rotate(0deg) translateY(-1em);
+}
+.menu li:hover {
+  background: #FFD31D;
+  z-index: 10;
+}
+
+// .menu li:nth-of-type(1) {
+//   transform: rotate(-90deg);
+//   position: absolute;
+//   left: -2.5em;
+//   top: -6.3em;
+// }
+// .menu li:nth-of-type(2) {
+//   transform: rotate(-45deg);
+//   position: absolute;
+//   left: 1.4em;
+//   top: -4.7em;
+// }
+// .menu li:nth-of-type(3) {
+//   position: absolute;
+//   left: 2.9em;
+//   top: -0.8em;
+// }
+// .menu li:nth-of-type(4) {
+//   transform: rotate(45deg);
+//   position: absolute;
+//   left: 1.4em;
+//   top: 2.9em;
+// }
+// .menu li:nth-of-type(5) {
+//   transform: rotate(90deg);
+//   position: absolute;
+//   left: -2.5em;
+//   top: 4.5em;
+// }
+
+.menu li:nth-of-type(1) {
+  transform: rotate(-90deg);
+  position: absolute;
+  left: -1.2em;
+  top: -4.2em;
+}
+.menu li:nth-of-type(2) {
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 2em;
+  top: -3em;
+}
+.menu li:nth-of-type(3) {
+  position: absolute;
+  left: 3.4em;
+  top: 0.3em;
+}
+.menu li:nth-of-type(4) {
+  transform: rotate(45deg);
+  position: absolute;
+  left: 2em;
+  top: 3.7em;
+}
+.menu li:nth-of-type(5) {
+  transform: rotate(90deg);
+  position: absolute;
+  left: -1.2em;
+  top: 5em;
+}
