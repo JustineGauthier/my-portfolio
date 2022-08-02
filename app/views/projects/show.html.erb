@@ -1,6 +1,8 @@
 <div class="background-show show">
   <div class="container white-background">
-    <%= link_to " Découvrir ce projet !", root_path, class: "back_to_home" %>
+    <a href="<%=root_path%>" class="back-to-menu">
+      <i  class="arrow"></i>
+    </a>
     <h1><%= @project.title %></h1>
     <div class="project-infos">
       <img src="<%= cl_image_path @project.photo.key, radius: 20 %>" alt="project">
