@@ -1,3 +1,5 @@
+$blue: #002C6A;
+
 .banner {
   height: 100vh;
   display: flex;
@@ -6,18 +8,29 @@
   h1 {
     margin: 38vh 0 0 11vw;
   }
-
-  i {
-    width: 100%;
-    // transform: rotate(0deg);
-    // transition: transform 500ms ease-in-out;
-    // :active{
-    //   transform: rotate(180deg);
-    // }
-  }
 }
 
 .scroll-down {
   text-align: center;
-  font-size: 6vw;
-}
+  height: 100%;
+  transform: translate(0%,0%);
+    &:hover {
+      .arrow {
+      border-color: $blue;
+      box-shadow: 6px -6px 0 #FA9191;
+      }
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border-top: 10px solid $blue;
+    border-right: 10px solid $blue;
+    box-shadow: 0 0 0 lightgray;
+    transition: all 200ms ease;
+    transform: translate3d(0,-50%,0) rotate(135deg);
+    }
