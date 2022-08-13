@@ -1,25 +1,49 @@
-// @media only screen and (max-width: 600px){
-//   .cards {
-//     height: 30%;
-//   }
+@media only screen and (min-width: 1201px){
+  /*Desktop*/
 
-//   #item-1:checked ~ .cards #project-3, #item-2:checked ~ .cards #project-1, #item-3:checked ~ .cards #project-2 {
-//     transform: translatex(-55%) scale(.8)!important;
-//   }
+  .cards img {
+    height: 23vw;
+  }
 
-//   #item-1:checked ~ .cards #project-2, #item-2:checked ~ .cards #project-3, #item-3:checked ~ .cards #project-1 {
-//     transform: translatex(55%) scale(.8)!important;
-//   }
+  .cards {
+    height: 23vw;
+  }
+  .player {
+    min-width: 25vw;
+    margin-top: 35px;
+  }
+}
 
-//   #item-1:checked ~ .cards #project-1, #item-2:checked ~ .cards #project-2, #item-3:checked ~ .cards #project-3 {
-//     img {
-//       width: 150%;
-//     }
-//   }
-// }
+@media only screen and (max-width: 1200px){
+  /*Tablets*/
 
-.card-background input[type=radio] {
-  display: none;
+  .cards img {
+    height: 30vw;
+  }
+
+  .cards {
+    height: 30vw;
+  }
+  .player {
+    min-width: 28vw;
+    margin-top: 35px;
+  }
+}
+
+@media only screen and (max-width: 992px){
+  /*laptops*/
+
+  .cards img {
+    height: 35vw;
+  }
+
+  .cards {
+    height: 35vw;
+  }
+  .player {
+    min-width: 28vw;
+    margin-top: 35px;
+  }
 }
 
 #projects {
@@ -52,7 +76,7 @@
 .player {
   background-color: white;
   border-radius: 8px;
-  min-width: 25vw;
+  // min-width: 25vw;
   padding: 16px 10px;
   box-shadow: 0 10px 30px rgba(0,0,0,.3);
 }
