@@ -1,23 +1,21 @@
 #skills {
-  height: 100vh;
-  margin: 0 10vw;
-  padding: 10vh 0 0 5vw;
+  padding: 4vw 15vw;
   p {
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 1.7vw;
+    line-height: 2vw;
   }
 }
 
 .skills-list {
   display: flex;
-  margin-top: 5vh;
+  margin-top: 2vw;
     div {
       width: 50%;
     }
 }
 
 .first-div {
-  border-right: 6px solid;
+  border-right: 0.5vw solid;
   margin-right: 2vw;
   padding-right: 5px;
 }

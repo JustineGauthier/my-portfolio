@@ -1,7 +1,27 @@
-.index-background {
-  background-image: url(background_home.svg);
+// .index-background {
+//   background-image: url(background_home.svg);
+//   background-repeat: no-repeat;
+//   background-size: 100%;
+// }
+
+.banner-background {
+  background-image: url(background_banner.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+}
+
+.middle-background {
+  background-image: url(background_middle.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.end-background {
+  background-image: url(background_end.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
 }
 
 .background-show {
