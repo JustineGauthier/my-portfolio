@@ -1,13 +1,13 @@
 .card {
   position: absolute;
   width: fit-content;
-  left: 0;
-  right: 0;
+  // left: 0;
+  // right: 0;
   margin: auto;
   transition: transform .4s ease;
   cursor: pointer;
   img {
-    // height: 23vw;
+    // height: 50vw;
     object-fit: contain;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,.3);

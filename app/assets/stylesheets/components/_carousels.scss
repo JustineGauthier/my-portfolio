@@ -1,6 +1,19 @@
 @media only screen and (min-width: 1201px){
   /*Desktop*/
 
+  #item-1:checked ~ .cards #project-3, #item-2:checked ~ .cards #project-1, #item-3:checked ~ .cards #project-2 {
+    transform: translatex(-40%) scale(.8);
+  }
+
+  #item-1:checked ~ .cards #project-2, #item-2:checked ~ .cards #project-3, #item-3:checked ~ .cards #project-1 {
+    transform: translatex(40%) scale(.8);
+  }
+
+  .card {
+    left: 0;
+    right: 0;
+  }
+
   .cards img {
     height: 23vw;
   }
@@ -16,6 +29,19 @@
 
 @media only screen and (max-width: 1200px){
   /*Tablets*/
+
+  #item-1:checked ~ .cards #project-3, #item-2:checked ~ .cards #project-1, #item-3:checked ~ .cards #project-2 {
+    transform: translatex(-40%) scale(.8);
+  }
+
+  #item-1:checked ~ .cards #project-2, #item-2:checked ~ .cards #project-3, #item-3:checked ~ .cards #project-1 {
+    transform: translatex(40%) scale(.8);
+  }
+
+  .card {
+    left: 0;
+    right: 0;
+  }
 
   .cards img {
     height: 30vw;
@@ -33,6 +59,18 @@
 @media only screen and (max-width: 992px){
   /*laptops*/
 
+  #item-1:checked ~ .cards #project-3, #item-2:checked ~ .cards #project-1, #item-3:checked ~ .cards #project-2 {
+    transform: translatex(-35%) scale(.8);
+  }
+
+  #item-1:checked ~ .cards #project-2, #item-2:checked ~ .cards #project-3, #item-3:checked ~ .cards #project-1 {
+    transform: translatex(35%) scale(.8);
+  }
+
+  .card {
+    left: 0;
+    right: 0;
+  }
   .cards img {
     height: 35vw;
   }
@@ -46,12 +84,42 @@
   }
 }
 
+@media only screen and (max-width: 768px){
+  #item-1:checked ~ .cards #project-3, #item-2:checked ~ .cards #project-1, #item-3:checked ~ .cards #project-2 {
+    transform: translatex(0%) scale(.8);
+    top: 14vw;
+  }
+
+  #item-1:checked ~ .cards #project-2, #item-2:checked ~ .cards #project-3, #item-3:checked ~ .cards #project-1 {
+    transform: translatex(0%) scale(.8);
+    top: -14vw;
+  }
+
+  .cards img {
+    height: 50vw;
+  }
+
+  .cards {
+    height: 50vw;
+    margin: 10vw 0;
+  }
+  .player {
+    display: none;
+  }
+}
+
 #projects {
-  padding: 3vw 15vw;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    padding: 0 15vw;
+  }
+  .container {
+    margin-top: 1vw;
+  }
 }
 
 #item-1:checked ~ .cards #project-3, #item-2:checked ~ .cards #project-1, #item-3:checked ~ .cards #project-2 {
-  transform: translatex(-40%) scale(.8);
   // opacity: .6;
   z-index: 0;
   a {
@@ -60,7 +128,6 @@
 }
 
 #item-1:checked ~ .cards #project-2, #item-2:checked ~ .cards #project-3, #item-3:checked ~ .cards #project-1 {
-  transform: translatex(40%) scale(.8);
   // opacity: .6;
   z-index: 0;
   a {
