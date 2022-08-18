@@ -5,6 +5,10 @@ $breakpoints: (
   "desktop-down": 1200px,
 );
 
+$pink: #fdaead;
+$yellow: #FFD31D;
+$blue: #002C6A;
+
 @mixin media-max($_key) {
   @media screen and (max-width: map-get($breakpoints, $_key)) {
       &{ @content; }
@@ -14,7 +18,7 @@ $breakpoints: (
 * {
   font-family: "Comfortaa", "Helvetica", "sans-serif";
   box-sizing: border-box;
-  color: #002C6A;
+  color: $blue;
 }
 
 html, body {
