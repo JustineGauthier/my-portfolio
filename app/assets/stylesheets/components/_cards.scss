@@ -1,4 +1,6 @@
 .card {
+  left: 0;
+  right: 0;
   position: absolute;
   width: fit-content;
   // left: 0;
@@ -7,10 +9,22 @@
   transition: transform .4s ease;
   cursor: pointer;
   img {
-    // height: 50vw;
+    height: 23vw;
     object-fit: contain;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,.3);
+
+    @include media-max("desktop-down") {
+      height: 30vw;
+    }
+
+    @include media-max("tablet-down") {
+      height: 35vw;
+    }
+
+    @include media-max("tablet-up") {
+      height: 50vw;
+    }
   }
 }
 
@@ -19,13 +33,26 @@
 }
 
 .cards {
+  height: 23vw;
   position: relative;
   width: 100%;
-  // height: 25vw;
+
+  @include media-max("desktop-down") {
+    height: 30vw;
+  }
+
+  @include media-max("tablet-down") {
+    height: 35vw;
+  }
+
+  @include media-max("tablet-up") {
+    height: 50vw;
+    margin: 10vw 0;
+  }
 }
 
 .card-background {
-  margin-top: 3vw;
+  margin-top: 4vw;
   display: flex;
   flex-direction: column;
   align-items: center;

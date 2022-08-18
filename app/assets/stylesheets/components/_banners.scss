@@ -8,6 +8,10 @@ $blue: #002C6A;
   h1 {
     margin: 15vw 0 0 11vw;
   }
+
+  @include media-max("phone-down") {
+    padding-bottom: 20vw;
+  }
 }
 
 .scroll-down {
@@ -18,9 +22,14 @@ $blue: #002C6A;
   transform: translate(0%,0%);
     &:hover {
       .arrow {
-      border-color: $blue;
-      box-shadow: 0.4vw -0.4vw 0 #FA9191;
+        @include media-max("phone-down") {
+          box-shadow: 1vw -1vw 0 #FA9191;
+        }
+
+        border-color: $blue;
+        box-shadow: 0.4vw -0.4vw 0 #FA9191;
       }
+
     }
   }
 
@@ -34,4 +43,12 @@ $blue: #002C6A;
     border-right: 0.6vw solid $blue;
     transition: all 200ms ease;
     transform: translate3d(0,-50%,0) rotate(135deg);
+
+    @include media-max("phone-down") {
+      top: 6vw;
+      width: 6vw;
+      height: 6vw;
+      border-top: 2vw solid $blue;
+      border-right: 2vw solid $blue;
+    }
     }

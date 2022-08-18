@@ -1,8 +1,18 @@
 #skills {
   padding: 4vw 15vw;
+
+  @include media-max("phone-down") {
+    padding: 6vw 6vw;
+  }
+
   p {
     font-size: 1.7vw;
     line-height: 2vw;
+
+    @include media-max("phone-down") {
+      font-size: 6vw;
+      line-height: 8vw;
+    }
   }
 }
 
