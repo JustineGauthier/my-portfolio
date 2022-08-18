@@ -9,6 +9,11 @@
     font-size: 1.7vw;
     line-height: 2vw;
 
+    @include media-max("tablet-up") {
+      font-size: 2.5vw;
+      line-height: 2.9vw;
+    }
+
     @include media-max("phone-down") {
       font-size: 6vw;
       line-height: 8vw;

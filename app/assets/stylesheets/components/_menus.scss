@@ -9,13 +9,17 @@
   cursor: pointer;
   font-size: 20px;
   z-index: 1;
-    &:hover {
-      background: $pink;
-      &:after {
-        border-top: 0.6em double $yellow;
-        border-bottom: 0.2em solid $yellow;
-      }
+  &:hover {
+    background: $pink;
+    &:after {
+      border-top: 0.6em double $yellow;
+      border-bottom: 0.2em solid $yellow;
     }
+  }
+
+  @include media-max("phone-down") {
+    margin: 11.5em -1em;
+  }
 }
 
 .menu:after {
