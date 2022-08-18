@@ -1,9 +1,18 @@
 h1 {
-  font-size: 14vh;
-  line-height: 15vh;
+  font-size: 8vw;
+  line-height: 8vw;
+
+  @include media-max("phone-down") {
+    font-size: 13vw;
+    line-height: 15vw;
+  }
 }
 
 h2{
   margin: 0;
-  font-size: 14vh;
+  font-size: 7vw;
+
+  @include media-max("phone-down") {
+    font-size: 10vw;
+  }
 }

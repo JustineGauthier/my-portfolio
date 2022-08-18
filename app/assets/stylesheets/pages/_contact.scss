@@ -1,9 +1,7 @@
 #contact {
-  height: 100vh;
-  margin: 0 10vw;
-  padding: 10vh 0 0 5vw;
-  img {
-    width: 4rem;
+  padding: 6vw 15vw;
+  @include media-max("phone-down") {
+    padding: 6vw 6vw;
   }
 }
 
@@ -13,15 +11,52 @@
   height: 45vh;
   margin-top: 11vh;
   justify-content: space-between;
+
+  @include media-max("desktop-down") {
+    height: 50vh;
+    margin-top: 4vh;
+  }
+
+  @include media-max("tablet-down") {
+    height: 35vh;
+  }
+
+    @include media-max("phone-down") {
+      height: 25vh;
+      margin-top: 4vh;
+    }
+
   a, p {
-    font-size: 35px;
+    font-size: 1.5vw;
     margin: 0;
-    line-height: 64px;
+
+    @include media-max("desktop-down") {
+      font-size: 4vw;
+    }
+
+    @include media-max("phone-down") {
+      font-size: 6vw;
+    }
   }
+
+  #mail {
+    @include media-max("phone-down") {
+      font-size: 4.6vw;
+    }
+  }
+
+
   img {
-    margin-right: 2rem;
+    width: 3vw;
+    margin-right: 1vw;
+    @include media-max("phone-down") {
+      width: 6vw;
+      margin-right: 3vw;
+    }
   }
+
   div {
     display: flex;
+    align-items: center;
   }
 }
