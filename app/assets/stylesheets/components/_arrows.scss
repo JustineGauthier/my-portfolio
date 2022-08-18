@@ -1,0 +1,18 @@
+.back-to-menu {
+  position: relative;
+  width: 100%;
+  top: 35px;
+  left: -35px;
+  transform: translate(0%,0%);
+  &:hover {
+    .arrow {
+    border-color: $blue;
+    box-shadow: 6px -6px 0 #FA9191;
+    }
+  }
+  .arrow {
+    width: 35px;
+    height: 35px;
+    transform: translate3d(0,-50%,0) rotate(-135deg);
+  }
+}

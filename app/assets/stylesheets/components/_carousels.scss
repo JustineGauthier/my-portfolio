@@ -1,67 +1,77 @@
 #projects {
-  height: 100vh;
-  padding: 10vh 0 0 5vw;
-  margin: 0 10vw;
-}
+  display: flex;
+  flex-direction: column;
+  h2 {
+    padding: 0 15vw;
 
-@media only screen and (max-width: 600px){
-  .cards {
-    height: 30%;
-  }
-
-  #item-1:checked ~ .cards #project-3, #item-2:checked ~ .cards #project-1, #item-3:checked ~ .cards #project-2 {
-    transform: translatex(-55%) scale(.8)!important;
-  }
-
-  #item-1:checked ~ .cards #project-2, #item-2:checked ~ .cards #project-3, #item-3:checked ~ .cards #project-1 {
-    transform: translatex(55%) scale(.8)!important;
-  }
-
-  #item-1:checked ~ .cards #project-1, #item-2:checked ~ .cards #project-2, #item-3:checked ~ .cards #project-3 {
-    img {
-      width: 150%;
+    @include media-max("phone-down") {
+      padding: 0 6vw;
     }
   }
 }
 
 #item-1:checked ~ .cards #project-3, #item-2:checked ~ .cards #project-1, #item-3:checked ~ .cards #project-2 {
   transform: translatex(-40%) scale(.8);
-  // opacity: .6;
   z-index: 0;
   a {
     pointer-events: none;
+  }
+  @include media-max("tablet-down") {
+    transform: translatex(-35%) scale(.8);
+  }
+
+  @include media-max("tablet-up") {
+    transform: translatex(0%) scale(.8);
+    top: 14vw;
   }
 }
 
 #item-1:checked ~ .cards #project-2, #item-2:checked ~ .cards #project-3, #item-3:checked ~ .cards #project-1 {
   transform: translatex(40%) scale(.8);
-  // opacity: .6;
   z-index: 0;
   a {
     pointer-events: none;
+  }
+
+  @include media-max("tablet-down") {
+    transform: translatex(35%) scale(.8);
+  }
+
+  @include media-max("tablet-up") {
+    transform: translatex(0%) scale(.8);
+    top: -14vw;
   }
 }
 
 #item-1:checked ~ .cards #project-1, #item-2:checked ~ .cards #project-2, #item-3:checked ~ .cards #project-3 {
   transform: translatex(0) scale(1);
-  opacity: 1;
   z-index: 1;
 }
 
 .player {
+  min-width: 25vw;
+  margin-top: 35px;
   background-color: white;
   border-radius: 8px;
-  min-width: 320px;
   padding: 16px 10px;
   box-shadow: 0 10px 30px rgba(0,0,0,.3);
 
+  @include media-max("desktop-down") {
+    min-width: 28vw;
+    margin-top: 35px;
+  }
+
+  @include media-max("tablet-up") {
+    display: none;
+  }
 }
 
 .upper-part {
   position: relative;
   display: flex;
   align-items: center;
-  height: 40px;
+  margin-bottom: 12px;
+  height: 39px;
   overflow: hidden;
 }
 
@@ -72,19 +82,18 @@
 .project-info .title {
   font-weight: 700;
   line-height: 24px;
-  font-size: 22px;
 }
 
 .subtitle {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 16px;
 }
 
 .info-area {
-  text-align: center;
   width: 100%;
   position: absolute;
   top: 0;
+  text-align: center;
   transition: transform .4s ease-in;
 }
 

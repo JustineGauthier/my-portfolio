@@ -8,107 +8,108 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-  <div class="index-background">
-    <div class="banner">
+  <div>
+    <div class="banner banner-background">
       <h1>Hey,<br>I'm Justine,<br>A web developper !</h1>
-      <div class="scroll-down">
-        <a href="#about">
-          <i class="fa-solid fa-chevron-down"></i>
-        </a>
-      </div>
+      <a href="#about" class="scroll-down">
+        <i  class="arrow"></i>
+      </a>
     </div>
-    <div class="container" id="about">
-      <div class="white-background">
-        <h2>About me !</h2>
-        <p>
-          I am a young full stack developer in Ruby on Rails and Javascript.
-          <br><br>I discovered the code through the Wagon training in Lyon, but above all, I discovered a real passion for this art!
-          <br><br>Very creative, and keen on logic since always, I take as much pleasure in digging my brains on a backend problem as designing a user interface!
-          <br><br>Being a former nurse, I also have no difficulty working in a team.
-          <br><br>The values of ecology and animal welfare are very important in my life, so I want to focus my future projects and professional experiences around these axes!
-        </p>
-      </div>
-    </div>
-    <div id="skills">
-      <h2>My skills</h2>
-      <div class="skills-list">
-        <div class="first-div">
-          <p><i class="fa-solid fa-caret-right"></i> Ruby on Rails</p>
-          <p><i class="fa-solid fa-caret-right"></i> Javascript (ES6) - Ajax</p>
-          <p><i class="fa-solid fa-caret-right"></i> jQuery</p>
-          <p><i class="fa-solid fa-caret-right"></i> HTML - CSS - SASS - Bootstrap</p>
-          <p><i class="fa-solid fa-caret-right"></i> SQL</p>
-          <p><i class="fa-solid fa-caret-right"></i> 3rd-party services (Heroku, Postmark, Cloudinary, Algolia, etc...)</p>
-          <p><i class="fa-solid fa-caret-right"></i> inskape</p>
-        </div>
-        <div>
-          <p><i class="fa-solid fa-caret-right"></i> wireframing on Figma/Sketch</p>
-          <p><i class="fa-solid fa-caret-right"></i> Product mindset</p>
-          <p><i class="fa-solid fa-caret-right"></i> UX/UI basics</p>
-          <p><i class="fa-solid fa-caret-right"></i> communication and pitch skills</p>
-          <p><i class="fa-solid fa-caret-right"></i> collaboration workflows with git/Github</p>
-          <p><i class="fa-solid fa-caret-right"></i> intermediate level english</p>
+    <div class="middle-background">
+      <div class="container" id="about">
+        <div class="white-background">
+          <h2>About me !</h2>
+          <p>
+            I am a young full stack developer in Ruby on Rails and Javascript.
+            <br><br>I discovered the code through the Wagon training in Lyon, but above all, I discovered a real passion for this art!
+            <br><br>Very creative, and keen on logic since always, I take as much pleasure in digging my brains on a backend problem as designing a user interface!
+            <br><br>I also think I am someone very adaptive, flexible and always willing!
+            <br><br>Being a former nurse, I also have no difficulty working in a team.
+            <br><br>The values of ecology and animal welfare are very important in my life, so I want to focus my future projects and professional experiences around these axes!
+          </p>
         </div>
       </div>
-    </div>
-    <div id="projects">
-      <h2>My projects</h2>
-      <div class="container">
-        <div class="card-background" data-controller="toggle-background">
-          <% @projects.each do |project| %>
-            <input data-action="click->toggle-background#background"
-              type="radio" name="slider" id="item-<%=@count.to_s%>" <%= @count == 1 ? "checked" : "" %> >
-            <% @count += 1 %>
-          <% end %>
-          <div class="cards">
-            <% @projects.each do |project| %>
-              <label class="card" for="item-<%=@count2%>" id="project-<%=@count2.to_s%>">
-                <a href="<%= project_path(project)%>">
-                  <img src="<%= cl_image_path project.photo.key, radius: 20 %>" alt="project">
-                </a>
-              </label>
-              <% @count2 += 1 %>
-            <% end %>
+      <div id="skills">
+        <h2>My skills</h2>
+        <div class="skills-list">
+          <div class="first-div">
+            <p><i class="fa-solid fa-caret-right"></i> Ruby on Rails</p>
+            <p><i class="fa-solid fa-caret-right"></i> Javascript (ES6) - Ajax</p>
+            <p><i class="fa-solid fa-caret-right"></i> jQuery</p>
+            <p><i class="fa-solid fa-caret-right"></i> HTML - CSS - SASS - Bootstrap</p>
+            <p><i class="fa-solid fa-caret-right"></i> SQL</p>
+            <p><i class="fa-solid fa-caret-right"></i> 3rd-party services (Heroku, Postmark, Cloudinary, Algolia, etc...)</p>
+            <p><i class="fa-solid fa-caret-right"></i> inskape</p>
           </div>
-          <div class="player">
-            <div class="upper-part">
-              <div class="info-area" id="slide">
-                <% @projects.each do |project| %>
-                  <label class="project-info" id="project-info-<%=@count3%>">
-                    <%= link_to project_path(project) do %>
-                      <div class="title"><%= project.title %></div>
-                      <div class="subtitle"><%= project.category.name %></div>
-                    <% end %>
-                  </label>
-                  <% @count3 += 1 %>
-                <% end %>
+          <div>
+            <p><i class="fa-solid fa-caret-right"></i> wireframing on Figma/Sketch</p>
+            <p><i class="fa-solid fa-caret-right"></i> Product mindset</p>
+            <p><i class="fa-solid fa-caret-right"></i> UX/UI basics</p>
+            <p><i class="fa-solid fa-caret-right"></i> communication and pitch skills</p>
+            <p><i class="fa-solid fa-caret-right"></i> collaboration workflows with git/Github</p>
+            <p><i class="fa-solid fa-caret-right"></i> intermediate level english</p>
+          </div>
+        </div>
+      </div>
+      <div id="projects">
+        <h2>My projects</h2>
+        <div class="container">
+          <div class="card-background" data-controller="toggle-background">
+            <% @projects.each do |project| %>
+              <input data-action="click->toggle-background#background"
+                type="radio" name="slider" id="item-<%=@count.to_s%>" <%= @count == 1 ? "checked" : "" %> >
+              <% @count += 1 %>
+            <% end %>
+            <div class="cards">
+              <% @projects.each do |project| %>
+                <label class="card" for="item-<%=@count2%>" id="project-<%=@count2.to_s%>">
+                  <a href="<%= project_path(project)%>">
+                    <img src="<%= cl_image_path project.photo.key, radius: 20 %>" alt="project">
+                  </a>
+                </label>
+                <% @count2 += 1 %>
+              <% end %>
+            </div>
+            <div class="player">
+              <div class="upper-part">
+                <div class="info-area" id="slide">
+                  <% @projects.each do |project| %>
+                    <label class="project-info" id="project-info-<%=@count3%>">
+                      <%= link_to project_path(project) do %>
+                        <div class="title"><%= project.title %></div>
+                        <div class="subtitle"><%= project.category.name %></div>
+                      <% end %>
+                    </label>
+                    <% @count3 += 1 %>
+                  <% end %>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="admin">
-            <% @projects.each do |project| %>
-              <div>
-                <% if policy(project).edit? %>
-                  <%= project.title %>
-                  <%= link_to "Modifier", edit_project_path(project) %>
-                <% end %>
-                <% if policy(project).destroy? %>
-                  <%= link_to "Supprimer", project_path(project), method: :delete %>
-                <% end %>
-              </div>
+            <div class="admin">
+              <% @projects.each do |project| %>
+                <div>
+                  <% if policy(project).edit? %>
+                    <%= project.title %>
+                    <%= link_to "Modifier", edit_project_path(project) %>
+                  <% end %>
+                  <% if policy(project).destroy? %>
+                    <%= link_to "Supprimer", project_path(project), method: :delete %>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+            <% if policy(Project).create? %>
+              <%= link_to "Ajouter un projet", new_project_path %>
             <% end %>
           </div>
-          <% if policy(Project).create? %>
-            <%= link_to "Ajouter un projet", new_project_path %>
-          <% end %>
         </div>
       </div>
     </div>
-    <div id="contact">
+    <div class="end-background" id="contact">
       <h2>Contact</h2>
       <div class="contact-links">
         <div><img src="icon-girl.svg" alt="icon of a girl"><p>Justine Gauthier</p></div>
-        <div><img src="icon-mail.svg" alt="icon of an envelope"><p>gauthier.justine2500@gmail.com</p></div>
+        <div><img src="icon-mail.svg" alt="icon of an envelope"><p id="mail">gauthier.justine25000@gmail.com</p></div>
         <div><img src="icon-linkedin.svg" alt="icon of Linkedin's logo"><a href="https://www.linkedin.com/in/gauthier-justine-669119242/", target="_blank">Mon linkedin</a></div>
         <div><img src="icon-github.svg" alt="icon of GitHub's logo"><a href="https://github.com/JustineGauthier", target="_blank">Mon github</a></div>
       </div>

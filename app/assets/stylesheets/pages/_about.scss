@@ -1,9 +1,19 @@
 #about {
-  height: 100vh;
-  margin: 0 10vw;
+  padding: 3vw 10vw;
+
+  @include media-max("phone-down") {
+    padding: 0 3vw;
+  }
+
   p {
-    font-size: 30px;
-    line-height: 35px;
-    margin-top: 40px;
+    font-size: 1.6vw;
+    line-height: 1.8vw;
+    margin-top: 2vw;
+
+    @include media-max("phone-down") {
+      font-size: 6vw;
+      line-height: 8vw;
+      margin-top: 6vw;
+    }
   }
 }
