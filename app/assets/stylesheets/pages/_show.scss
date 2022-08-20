@@ -3,21 +3,64 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+
+  #h1-big-size {
+    @include media-max("phone-down") {
+      display: none;
+    }
+  }
+
+  #h1-little-size {
+    display: none;
+
+    @include media-max("phone-down") {
+      display: contents;
+      font-size: 6vw;
+    }
+  }
+
   h2 {
-    font-size: 2em;
+    font-size: 2vw;
     margin: 15px 0;
+
+    @include media-max("tablet-down") {
+      font-size: 3vw;
+    }
+
+    @include media-max("phone-down") {
+      margin-top: -3vw;
+    }
   }
   p {
-    font-size: 1.5em;
+    font-size: 1.5vw;
     margin: 10px 0;
+
+    @include media-max("tablet-down") {
+      font-size: 2vw;
+      margin: 5px 0;
+    }
+
+    @include media-max("phone-down") {
+      font-size: 4vw;
+    }
   }
 }
 
 .project-infos {
   display: flex;
   align-items: center;
+
+  @include media-max("phone-down") {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   img {
     max-width: 40vw;
+
+    @include media-max("phone-down") {
+      max-width: 80vw;
+    }
   }
 }
 
@@ -27,6 +70,10 @@
   display: flex;
   flex-direction: column;
   justify-items: center;
+  @include media-max("phone-down") {
+    max-width: 100%;
+    margin-left: 25px;
+  }
 }
 
 .project-link {
@@ -36,7 +83,7 @@
     font-weight: 700;
     &::after {
       content: "";
-      background: rgba(191, 198, 225, 0.7);
+      background: $purple;
       position: absolute;
       left: 12px;
       bottom: -6px;
