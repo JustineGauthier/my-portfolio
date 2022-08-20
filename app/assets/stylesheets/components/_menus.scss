@@ -8,13 +8,18 @@
   margin-right: 100px;
   cursor: pointer;
   font-size: 20px;
-    &:hover {
-      background: $pink;
-      &:after {
-        border-top: 0.6em double $yellow;
-        border-bottom: 0.2em solid $yellow;
-      }
+  z-index: 1;
+  &:hover {
+    background: $pink;
+    &:after {
+      border-top: 0.6em double $yellow;
+      border-bottom: 0.2em solid $yellow;
     }
+  }
+
+  @include media-max("phone-down") {
+    margin: 11.5em -1em;
+  }
 }
 
 .menu:after {
@@ -76,7 +81,7 @@
   transform: rotate(0deg) translateY(-1em);
 }
 .menu li:hover {
-  z-index: 2;
+  z-index: 10;
   a {
     color: $yellow;
   }

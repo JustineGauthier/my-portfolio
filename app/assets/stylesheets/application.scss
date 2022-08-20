@@ -1,4 +1,5 @@
 $breakpoints: (
+  "phone-up": 320px,
   "phone-down": 500px,
   "tablet-up": 768px,
   "tablet-down": 992px,
@@ -8,6 +9,7 @@ $breakpoints: (
 $pink: #fdaead;
 $yellow: #FFD31D;
 $blue: #002C6A;
+$purple: rgba(191, 198, 225, 0.7);
 
 @mixin media-max($_key) {
   @media screen and (max-width: map-get($breakpoints, $_key)) {
