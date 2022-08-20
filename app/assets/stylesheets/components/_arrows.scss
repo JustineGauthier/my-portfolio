@@ -1,18 +1,112 @@
-.back-to-menu {
-  position: relative;
-  width: 100%;
-  top: 35px;
-  left: -35px;
+.scroll-down {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  height: 100%;
   transform: translate(0%,0%);
-  &:hover {
-    .arrow {
-    border-color: $blue;
-    box-shadow: 6px -6px 0 #FA9191;
+    &:hover {
+      .arrow {
+        @include media-max("tablet-up") {
+          box-shadow: 0.7vw -0.7vw 0 #FA9191;
+        }
+
+        @include media-max("phone-down") {
+          box-shadow: 1vw -1vw 0 #FA9191;
+        }
+
+        border-color: $blue;
+        box-shadow: 0.4vw -0.4vw 0 #FA9191;
+      }
+
     }
   }
+
   .arrow {
-    width: 35px;
-    height: 35px;
+    position: absolute;
+    top: 3vw;
+    width: 3vw;
+    height: 3vw;
+    background: transparent;
+    border-top: 0.6vw solid $blue;
+    border-right: 0.6vw solid $blue;
+    transition: all 200ms ease;
+    transform: translate3d(0,-50%,0) rotate(135deg);
+
+    @include media-max("tablet-up") {
+      top: 4vw;
+      width: 5vw;
+      height: 5vw;
+      border-top: 1.3vw solid $blue;
+      border-right: 1.3vw solid $blue;
+    }
+
+    @include media-max("phone-down") {
+      top: 6vw;
+      width: 8vw;
+      height: 8vw;
+      border-top: 1.7vw solid $blue;
+      border-right: 1.7vw solid $blue;
+    }
+  }
+
+
+.back-to-menu-big {
+  position: relative;
+  width: 100%;
+  top: 2vw;
+  left: -2vw;
+  transform: translate(0%,0%);
+
+  @include media-max("phone-down") {
+    display: none;
+  }
+
+  .arrow {
+    border-top: 0.8vw solid $blue;
+    border-right: 0.8vw solid $blue;
+    @include media-max("tablet-up") {
+      border-top: 1.3vw solid $blue;
+      border-right: 1.3vw solid $blue;
+    }
+
+    &:hover {
+      border-color: $blue;
+      box-shadow: 0.4vw -0.4vw 0 #FA9191;
+    }
+  }
+
+  .arrow {
     transform: translate3d(0,-50%,0) rotate(-135deg);
+  }
+}
+
+.back-to-menu-little {
+  display: none;
+  position: relative;
+  width: 100%;
+  transform: translate(0%,0%);
+
+  @include media-max("phone-down") {
+    display: block;
+  }
+
+  .arrow {
+    top: 14vw;
+    left: 7vw;
+    transform: translate3d(0,-50%,0) rotate(-135deg);
+    &:hover {
+      box-shadow: 1vw -1vw 0 #FA9191;
+    }
+
+    @include media-max("phone-up") {
+      width: 9vw;
+      height: 9vw;
+      border-top: 2.5vw solid $blue;
+      border-right: 2.5vw solid $blue;
+      &:hover {
+          border-color: $blue;
+          box-shadow: 1.5vw -1.5vw 0 #fa9191;
+      }
+    }
   }
 }
