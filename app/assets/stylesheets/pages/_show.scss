@@ -3,32 +3,23 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-
-  #h1-big-size {
+  
+  h1 {
     @include media-max("phone-down") {
       display: none;
     }
   }
 
-  #h1-little-size {
-    display: none;
-
-    @include media-max("phone-down") {
-      display: contents;
-      font-size: 6vw;
-    }
-  }
-
-  h2 {
-    font-size: 2vw;
+  h2 p {
+    font-size: 1.7vw;
     margin: 15px 0;
 
     @include media-max("tablet-down") {
-      font-size: 3vw;
+      font-size: 2vw;
     }
 
     @include media-max("phone-down") {
-      margin-top: -3vw;
+      font-size: 4vw;
     }
   }
   p {
@@ -36,7 +27,7 @@
     margin: 10px 0;
 
     @include media-max("tablet-down") {
-      font-size: 2vw;
+      font-size: 1.6vw;
       margin: 5px 0;
     }
 
