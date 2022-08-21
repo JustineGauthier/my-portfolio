@@ -35,13 +35,14 @@
   padding: 5vh 5vw;
   box-shadow: 0 10px 30px rgba(0,0,0,.3);
   border-radius: 20px;
+  margin: 0 2vw;
 
   @include media-max("phone-down") {
     padding: 2vh 4vw;
   }
 
   h1 {
-    line-height: 8vh;
+    font-size: 6vw;
   }
 }
 
