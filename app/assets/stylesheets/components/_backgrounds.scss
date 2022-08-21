@@ -52,3 +52,10 @@
     margin: 0 4vw;
   }
 }
+
+.show .white-background {
+  @include media-max("tablet-down") {
+    width: 100%;
+    margin: 0 4vw;
+  }
+}

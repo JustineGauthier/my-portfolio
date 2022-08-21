@@ -7,7 +7,7 @@
     <a href="<%=root_path%>" class="back-to-menu-big">
       <i  class="arrow"></i>
     </a>
-    <h1><%= @project.title %></h1>
+    <h1 id="h1-big-size"><%= @project.title %></h1>
     <div class="project-infos">
       <img src="<%= cl_image_path @project.photo.key, radius: 20 %>" alt="project">
       <div class="project-description">
