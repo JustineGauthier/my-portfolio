@@ -12,6 +12,7 @@
       <img src="<%= cl_image_path @project.photo.key, radius: 20 %>" alt="project">
       <div class="project-description">
         <h2><%= simple_format(@project.description) %></h2>
+        <p><i class="fa-solid fa-caret-right"></i>  <strong>Envie d'essayer ?<br>Email :</strong> guest@hello.com<br><strong>Password :</strong> 123456</p>
         <p><i class="fa-solid fa-caret-right"></i> <%= @project.category.name %></p>
         <p><i class="fa-solid fa-caret-right"></i> Projet réalisé en <%= ConvertDate.new(date: @project.creation_date.to_s).call %>.</p>
         <p class="project-link"><i class="fa-solid fa-caret-right"></i> <%= link_to " Découvrir ce projet !", @project.url, class: "project_url", target: :_blank %></p>
