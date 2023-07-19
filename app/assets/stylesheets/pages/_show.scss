@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  
+
   h1 {
     @include media-max("phone-down") {
       display: none;

@@ -7,6 +7,7 @@
   <%= f.input :creation_date, as: :date, html5: true %>
   <%= f.label :category %>
   <%= f.collection_radio_buttons :category_id, Category.all, :id, :name %>
+  <%= f.input :account, as: :boolean %>
   <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
