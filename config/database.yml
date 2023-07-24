@@ -15,8 +15,10 @@
 # gem 'pg'
 #
 default: &default
-  adapter: postgresql
-  encoding: unicode
+  adapter: mysql2
+  encoding: utf8
+  username: root
+  password: rodoflote
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -81,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: my_portfolio_production
-  username: my_portfolio
-  password: <%= ENV['MY_PORTFOLIO_DATABASE_PASSWORD'] %>
+  database: monApp_production
+  username: votre_utilisateur_postgresql
+  password: votre_mot_de_passe_postgresql
